@@ -27,7 +27,7 @@ find /var/adm -mtime +3 –print 在/var/adm目录下查找更改时间在3日�
 find /etc -type d –print 在/etc目录下查找所有的目录  [type表示查找什么样的文件类型]
 find ./ -size 0 -exec rm {} \;   = rm -i `find ./ -size 0`   = find ./ -size 0 | xargs rm -f &  删除文件大小为零的文件 
 ```
-####find 与xargs的结合 常用于find进行查找文件，之后xargs对其进行处理
+### find 与xargs的结合 常用于find进行查找文件，之后xargs对其进行处理
 xargs的使用是由于很多命令不支持|管道来传递参数，才因此使用这个命令
 如下方的例子，xargs -i 表示的是将前面find找到的结果一行一行赋值给{}，-t表示的是先打印命令，然后再执行。
 xargs的其他参数具体使用方法参见：[xargs的用法](http://blog.csdn.net/zhangfn2011/article/details/6776925)
