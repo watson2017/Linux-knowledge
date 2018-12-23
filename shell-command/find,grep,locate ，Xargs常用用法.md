@@ -1,5 +1,5 @@
 # 一、find的常用用法
->### find < path > < expression > < cmd >
+> find < path > < expression > < cmd >
 >`path`： 所要搜索的目录及其所有子目录。默认为当前目录。
 `expression`： 所要搜索的文件的特征。
 `cmd`： 对搜索结果进行特定的处理。
