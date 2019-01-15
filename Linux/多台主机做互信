@@ -1,0 +1,12 @@
+spawn ssh 10.1.1.188
+expect "no)?"                       #表示当匹配到no)?的时候
+send "yes\n"                        #发送yes 并换行
+expect "word:"                      #表示匹配word:的时候
+send "123456\r"                     #表示发送123456并换行
+
+#!/bin/bash
+expect <<EOF &> /dev/null
+spawn ssh-copy-id -i .ssh/id_rsa.pub  192.168.80.$i 
+expect "word:"
+send "root\r"
+EOF
